@@ -1,0 +1,26 @@
+body{
+    background-color: #fffffff6;
+}
+
+
+nav {
+    border-bottom: 1px solid black;
+}
+
+.navbar ol {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.navbutton {
+    display: inline-block;
+    
+}
+
+.navbutton a::after {
+    display: inline-block;
+    color: #000;
+    font-size: 80%;
+    font-weight: bold;
+    padding: 0 3px;
+}
