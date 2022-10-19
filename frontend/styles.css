@@ -2,7 +2,6 @@ body{
     background-color: #fffffff6;
 }
 
-
 nav {
     border-bottom: 1px solid black;
 }
@@ -14,7 +13,6 @@ nav {
 
 .navbutton {
     display: inline-block;
-    
 }
 
 .navbutton a::after {
