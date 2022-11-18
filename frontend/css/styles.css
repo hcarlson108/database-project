@@ -78,6 +78,7 @@ body{
     align-items: center;
     position: absolute;
 }
+
 .bitmoji{
     width: 200px;
     display: flex;
