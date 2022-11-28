@@ -1,42 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>RL Public Library</title>
-</head>
-<body>
+  </head>
+
+  <!-- navbar -->
+  <body>
     <div class="top">
-        <h1 class="rlpl">Raymond Luther Public Library</h1>
-        <div class="loginsignup">
-            <button class="login">Login</button>
-            <button class="signup">Signup</button>
-        </div>
-        <nav class="navbar">
+      <h1 class="rlpl">Raymond Luther Public Library</h1>
+      <div class="loginsignup">
+        <button class="login">Login</button>
+        <button class="signup">Signup</button>
+      </div>
+      <nav class="navbar">
         <ol>
-            <li class="navbutton"><a href="home.html">Home</a></li>
-            <li class="navbutton"><a href="books.html">Books</a></li>
-            <li class="navbutton"><a href="movies.html">Movies</a></li>
-            <li class="navbutton"><a href="more.html">More</a></li>
+          <li class="navbutton"><a href="home.html">Home</a></li>
+          <li class="navbutton"><a href="books.html">Books</a></li>
+          <li class="navbutton"><a href="movies.html">Movies</a></li>
+          <li class="navbutton"><a href="more.html">More</a></li>
         </ol>
-        </nav>
+      </nav>
     </div>
-<main>
-    <section class="welcome">
-        <h1>Welcome to our library!</h1>
-        <p>Search for a book below</p>
-    </section> 
-    <section class="search">
-        <label for="site-search"></label>
-            <input type="search" id="site-search" name="q">
-        <button>Search</button>
-    </section>
-</main>
-<footer>
-    <!-- <img src="images/bitmojiz.jpg" alt="bitmoji's" class="bitmoji">-->
-</footer>
-<script src="./js/home.js"></script>
-</body>
+
+    <!-- main -->
+    <div class="main">
+      <div>
+        <h2>Welcome!</h2>
+        <p>Search for a Book or Movie below!</p>
+      </div>
+      <input type="text" />
+      <br />
+      <button class="searchbutton">Search</button>
+    </div>
+
+    <footer>
+      <!-- <img src="images/bitmojiz.jpg" alt="bitmoji's" class="bitmoji">-->
+    </footer>
+    <script src="./js/home.js"></script>
+  </body>
 </html>
