@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <?php include "../dbinfo.inc"; ?> -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,27 +7,38 @@
     <link rel="stylesheet" href="css/styles.css" />
     <title>RL Public Library</title>
   </head>
-
-  <!-- navbar -->
   <body>
+    <!-- <?php 
+        $conn = new mysqli("database-2.c1pwygv6gurd.us-east-2.rds.amazonaws.com",
+        "admin", 
+        "Pword1234",
+        "RaymondLutherPublicLibrary");
+        if ($conn->connect_error) {
+          die("Connection failed: " . $conn->connect_error);
+        }
+    ?> -->
+
+    <!-- navbar -->
     <div class="top">
       <h1 class="rlpl">Raymond Luther Public Library</h1>
       <div class="loginsignup">
-        <button class="login">Login</button>
-        <button class="signup">Signup</button>
+        <button class="login">Logout</button>
       </div>
       <nav class="navbar">
         <ol>
           <li class="navbutton"><a href="home.html">Home</a></li>
           <li class="navbutton"><a href="books.html">Books</a></li>
           <li class="navbutton"><a href="movies.html">Movies</a></li>
+          <li class="navbutton">
+            <a href="transactions.html">Transactions</a>
+          </li>
           <li class="navbutton"><a href="more.html">More</a></li>
         </ol>
       </nav>
     </div>
 
     <!-- main -->
-    <div class="main">
+    <div class="homecontent">
       <div>
         <h2>Welcome!</h2>
         <p>Search for a Book or Movie below!</p>
@@ -36,10 +47,5 @@
       <br />
       <button class="searchbutton">Search</button>
     </div>
-
-    <footer>
-      <!-- <img src="images/bitmojiz.jpg" alt="bitmoji's" class="bitmoji">-->
-    </footer>
-    <script src="./js/home.js"></script>
   </body>
 </html>

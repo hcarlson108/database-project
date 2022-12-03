@@ -1,5 +1,3 @@
-use NewLibrary;
-GO
 
 CREATE TABLE Movie
 (
@@ -28,12 +26,12 @@ CREATE TABLE Employee
   lname VARCHAR(20) NOT NULL,
   DOB DATE NOT NULL,
   StartDate DATE NOT NULL,
-  email VARCHAR(319) NOT NULL,
+  email VARCHAR(319) NOT NULL
 );
 
 CREATE TABLE Member
 (
-  Mnum INT IDENTITY(111,1) PRIMARY KEY,
+  Mnum INT AUTO_INCREMENT PRIMARY KEY,
   fname VARCHAR(20) NOT NULL,
   lname VARCHAR(20) NOT NULL,
   DOB DATE NOT NULL,
@@ -44,31 +42,42 @@ CREATE TABLE Member
 
 CREATE TABLE Checkout
 (
-  TransactionNum INT IDENTITY(1000,1) PRIMARY KEY ,
-  Enum INT  NOT NULL FOREIGN KEY REFERENCES Employee(Enum),
-  Mnum INT  NOT NULL FOREIGN KEY REFERENCES Member(Mnum),
+  TransactionNum INT AUTO_INCREMENT PRIMARY KEY ,
+  Enum INT  NOT NULL,
+      FOREIGN KEY(Enum) REFERENCES Employee(Enum),
+  Mnum INT  NOT NULL,
+       FOREIGN KEY(Mnum) REFERENCES Member(Mnum),
   DoC DATE NOT NULL,
   DoR DATE NOT NULL,
-  MovieName VARCHAR(50)  FOREIGN KEY REFERENCES Movie(MovieName),
-  ISBN char(13)  FOREIGN KEY REFERENCES Book(ISBN),
+  MovieName VARCHAR(50),
+      FOREIGN KEY(MovieName) REFERENCES Movie(MovieName),
+  ISBN char(13),
+      FOREIGN KEY(ISBN) REFERENCES Book(ISBN),
   MediaType BIT not Null
 );
 
+
 CREATE TABLE Reservation
 (
-  ResNum INT IDENTITY(1000,1) Primary Key, 
+  ResNum INT AUTO_INCREMENT Primary Key, 
   ResDate DATE NOT NULL,
-  Mnum INT NOT NULL FOREIGN Key References Member(Mnum),
-  MovieName VARCHAR(50)  FOREIGN KEY REFERENCES Movie(MovieName),
-  ISBN char(13)  FOREIGN KEY REFERENCES Book(ISBN),
+  Mnum INT NOT NULL,
+      FOREIGN Key(Mnum) References Member(Mnum),
+  MovieName VARCHAR(50),
+      FOREIGN KEY(MovieName) REFERENCES Movie(MovieName),
+  ISBN char(13),
+      FOREIGN KEY(ISBN) REFERENCES Book(ISBN),
   MediaType BIT not Null
 );
 
 CREATE TABLE Posses
 (
-  Mnum INT  NOT NULL FOREIGN KEY REFERENCES Member(Mnum),
-  MovieName VARCHAR(50)  FOREIGN KEY REFERENCES Movie(MovieName),
-  ISBN char(13)  FOREIGN KEY REFERENCES Book(ISBN),
+  Mnum INT  NOT NULL,
+      FOREIGN KEY(Mnum) REFERENCES Member(Mnum),
+  MovieName VARCHAR(50),
+      FOREIGN KEY(MovieName) REFERENCES Movie(MovieName),
+  ISBN char(13),
+      FOREIGN KEY(ISBN) REFERENCES Book(ISBN),
   MediaType BIT not Null
 );
 

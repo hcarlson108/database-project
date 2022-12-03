@@ -1,6 +1,3 @@
-use NewLibrary;
-GO
-
 INSERT INTO Member(fname, lname, DOB, JoinDate, Email, PhoneNum)
 VALUES('Quavious','Marshall','1991-04-02','2022-11-2','quavohuncho@gmail.com',NULL);
 

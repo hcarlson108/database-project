@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <?php include "../dbinfo.inc"; ?> -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,280 +8,327 @@
     <title>RL Public Library</title>
 </head>
 <body>
+    <!-- <?php 
+        $conn = new mysqli("database-2.c1pwygv6gurd.us-east-2.rds.amazonaws.com",
+        "admin", 
+        "Pword1234",
+        "RaymondLutherPublicLibrary");
+        if ($conn->connect_error) {
+          die("Connection failed: " . $conn->connect_error);
+        }
+    ?> -->
+
     <div class="top">
         <h1 class="rlpl">Raymond Luther Public Library</h1>
         <div class="loginsignup">
-            <button class="login">Login</button>
-            <button class="signup">Signup</button>
+            <button class="login">Logout</button>
         </div>
         <nav class="navbar">
         <ol>
             <li class="navbutton"><a href="home.html">Home</a></li>
             <li class="navbutton"><a href="books.html">Books</a></li>
             <li class="navbutton"><a href="movies.html">Movies</a></li>
+            <li class="navbutton"><a href="transactions.html">Transactions</a></li>
             <li class="navbutton"><a href="more.html">More</a></li>
         </ol>
         </nav>
     </div>
-    <h2 style="text-align: center ;">Welcome to the Raymond Luther movie catalog!</h2>
-    <h2>Search for a Movie</h2>
-    <form action="movies.html" method="get">
-        <input type="text" name="search" placeholder="Type here">
-        <input type="submit" value="Search">
-    </form>
-    <br> 
-    <p><i>Showing 10 Results</i></p>
-    <br> 
-    <hr>
-    <br>
 
-    <p style="float: left;" >
-        <a href="images/12angrymen.jpg" target="_self" title ="12 Angry Men">
-        <img src="images/12angrymen.jpg" height="275" border="1px"></a>
-    </p>
-    <h2><ins><i>12 Angry Men</i></ins></h2>
-    <br>
-    <textarea name="message" rows="16" cols="80"  
-    >
-Director: Sidney Lumet
 
-Rating: Approved
+    <!-- catalog -->
+    <div class="catalog">
+        <h2 style="text-align:center">Welcome to the Raymond Luther Movie Catalog!</h2>
+        <h2>Search for a Movie</h2>
+        <form action="movies.html" method="get">
+            <input type="text" name="search" placeholder="Type here">
+            <input type="submit" value="Search">
+        </form>
 
-Genre: Crime
+        <br> 
 
-Year: 1957
+        <div class="container">
+            <p style="float: left;">
+                <a href="images/12angrymen.jpg" target="_self">
+                <img src="images/12angrymen.jpg" height="300" width="200"></a>
+            </p>
+            <h2 style="text-align:center"><i><ins>12 Angry Men</ins></i></h2>
+            <br>
+            <div class="description">
+                <p>
+                    <b>Director:</b> Sidney Lumet
+                    <br>
+                    <b>Rating:</b> Approved
+                    <br>
+                    <b>Genre:</b> Crime
+                    <br>
+                    <b>Year:</b> 1957
+                    <br>
+                    <br>
+                    <p>
+                        <b>Movie Description:</b> 
+                        The jury in a New York City murder trial is frustrated by a single member whose skeptical
+                        caution forces them to more carefully consider the evidence before jumping to a hasty verdict.
+                    </p>
+                </p>
+            </div>
+        </div>
 
-Movie Description:
-The jury in a New York City murder trial is frustrated by a single member whose skeptical caution forces them to more carefully consider the evidence before jumping to a hasty verdict.
-</textarea>
-</div>
-
-    <br>
-    <hr>
-    <br>
-
-    <p style="float: left;">
-        <a href="images/pulpfiction.jpg" target="_self" title ="Pulp Fiction">
-        <img src="images/pulpfiction.jpg" height="300" border="1px"></a>
-    </p>
-    <h2><ins><i>Pulp Fiction</i></ins></h2>
-    <br>
-    <textarea name="message" rows="16" cols="80"  
-    >
-Director: Quentin Tarantino
-
-Rating: R
-
-Genre: Crime
-
-Year: 1994
-
-Movie Description:
-The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.
-    </textarea>
-</div>
-
-    <br>
-    <hr>
-    <br>
-
-    <p style="float: left;">
-        <a href=images/schindlers.jpg" target="_self" title ="Schindler's List">
-        <img src="images/schindlers.jpg" height="300" border="1px" ></a>
-    </p>
-    <h2><ins><i>Schindler's List</i></ins></h2>
-    <br>
-    <textarea name="message" rows="16" cols="80"  
-    >
-Director: Steven Spielberg
-
-Rating: R
-
-Genre: Drama
-
-Year: 1993
-
-Movie Description:
-In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.
-    </textarea>
-</div>
-
-    <br>
-    <hr>
-    <br>
-
-    <p style="float: left;">
-        <a href="images/darkknight.jpg" target="_self" title ="The Dark Knight">
-        <img src="images/darkknight.jpg" height="300" border="1px" ></a>
-    </p>
-    <h2><ins><i>The Dark Knight</i></ins></h2>
-    <br>
-    <textarea name="message" rows="16" cols="80"  
-    >
-Director: Christopher Nolan
-
-Rating: PG-13
-
-Genre: Action
-
-Year: 2008
-
-Movie Description:
-When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, the caped crusader must come to terms with one of the greatest psychological tests of his ability to fight injustice.
-    </textarea>
-</div>
+        <br>
         
+        <div class="container">
+            <p style="float: left;">
+                <a href="images/pulpfiction.jpg" target="_self">
+                <img src="images/pulpfiction.jpg" height="300"></a>
+            </p>
+            <h2 style="text-align:center"><i><ins>Pulp Fiction</ins></i></h2>
+            <br>
+            <div class="description">
+                <p>
+                    <b>Director:</b> Quentin Tarantino
+                    <br>
+                    <b>Rating:</b> R
+                    <br>
+                    <b>Genre:</b> Crime
+                    <br>
+                    <b>Year:</b> 1994
+                    <br>
+                    <br>
+                    <p>
+                        <b>Movie Description:</b> 
+                        The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four
+                        tales of violence and redemption.
+                    </p>
+                </p>
+            </div>
+        </div>
+
     <br>
-    <hr>
+
+        <div class="container">
+            <p style="float: left;">
+                <a href="images/schindlers.jpg" target="_self">
+                <img src="images/schindlers.jpg" height="300"></a>
+            </p>
+            <h2 style="text-align:center"><i><ins>Schindler's List</ins></i></h2>
+            <br>
+            <div class="description">
+                <p>
+                    <b>Director:</b> Steven Spielberg
+                    <br>
+                    <b>Rating:</b> R
+                    <br>
+                    <b>Genre:</b> Drama
+                    <br>
+                    <b>Year:</b> 1993
+                    <br>
+                    <br>
+                    <p>
+                        <b>Movie Description:</b> 
+                        In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce
+                        after witnessing their persecution by the Nazis.
+                    </p>
+                </p>
+            </div>
+        </div>
+
     <br>
 
-    <p style="float: left;">
-        <a href="images/godfather.jpg" target="_self" title ="The Godfather">
-        <img src="images/godfather.jpg" height="300" border="1px" ></a>
-    </p>
-    <h2><ins><i>The Godfather</i></ins></h2>
+        <div class="container">
+            <p style="float: left;">
+                <a href="images/darkknight.jpg" target="_self">
+                <img src="images/darkknight.jpg" height="300"></a>
+            </p>
+            <h2 style="text-align:center"><i><ins>The Dark Knight</ins></i></h2>
+            <br>
+            <div class="description">
+                <p>
+                    <b>Director:</b> Christopher Nolan
+                    <br>
+                    <b>Rating:</b> PG-13
+                    <br>
+                    <b>Genre:</b> Action
+                    <br>
+                    <b>Year:</b> 2008
+                    <br>
+                    <br>
+                    <p>
+                        <b>Movie Description:</b> 
+                        When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, the caped crusader must come to terms with one of the greatest
+                        psychological tests of his ability to fight injustice.
+                    </p>
+                </p>
+            </div>
+        </div>
+
     <br>
-    <textarea name="message" rows="16" cols="80"
-    >
-Director: Francis Ford Coppola
 
-Rating: R
+        <div class="container">
+            <p style="float: left;">
+                <a href="images/godfather.jpg" target="_self">
+                <img src="images/godfather.jpg" height="300"></a>
+            </p>
+            <h2 style="text-align:center"><i><ins>The Godfather</ins></i></h2>
+            <br>
+            <div class="description">
+                <p>
+                    <b>Director:</b> Francis Ford Coppola
+                    <br>
+                    <b>Rating:</b> R
+                    <br>
+                    <b>Genre:</b> Crime
+                    <br>
+                    <b>Year:</b> 1972
+                    <br>
+                    <br>
+                    <p>
+                        <b>Movie Description:</b> 
+                        The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.
+                    </p>
+                </p>
+            </div>
+        </div>
 
-Genre: Crime
-
-Year: 1972
-
-Movie Description:
-The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.
-    </textarea>
-</div>
-         
     <br>
-    <hr>
+
+        <div class="container">
+            <p style="float: left;">
+                <a href="images/godfather2.jpg" target="_self">
+                <img src="images/godfather2.jpg" height="300"></a>
+            </p>
+            <h2 style="text-align:center"><i><ins>The Godfather: Part II</ins></i></h2>
+            <br>
+            <div class="description">
+                <p>
+                    <b>Director:</b> Francis Ford Coppola
+                    <br>
+                    <b>Rating:</b> R
+                    <br>
+                    <b>Genre:</b> Crime
+                    <br>
+                    <b>Year:</b> 1974
+                    <br>
+                    <br>
+                    <p>
+                        <b>Movie Description:</b> 
+                        The early life and career of Vito Corleone in 1920s New York City is portrayed while his son, Michael,
+                        expands and tightens his grip on the family crime syndicate.
+                    </p>
+                </p>
+            </div>
+        </div>
+
     <br>
 
-    <p style="float: left;">
-        <a href="images/godfather2.jpg" target="_self" title ="The Godfather: Part II">
-        <img src="images/godfather2.jpg" height="300" border="1px" ></a>
-    </p>
-    <h2><ins><i>The Godfather: Part II</i></ins></h2>
+        <div class="container">
+            <p style="float: left;">
+                <a href="images/lord2001.jpg" target="_self">
+                <img src="images/lord2001.jpg" height="300"></a>
+            </p>
+            <h2 style="text-align:center"><i><ins>The Lord of the Rings: The Fellowship of the Ring</ins></i></h2>
+            <br>
+            <div class="description">
+                <p>
+                    <b>Director:</b> Peter Jackson
+                    <br>
+                    <b>Rating:</b> PG-13
+                    <br>
+                        b>Genre:</b> Adventure
+                    <br>
+                    <b>Year:</b> 2001
+                    <br>
+                    <br>
+                    <p>
+                        <b>Movie Description:</b> 
+                        A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth
+                        from the Dark Lord Sauron.
+                    </p>
+                </p>
+            </div>
+        </div>
+
     <br>
-    <textarea name="message" rows="16" cols="80"
-    >
-Director: Francis Ford Coppola
 
-Rating: R
+        <div class="container">
+            <p style="float: left;">
+                <a href="images/lord2003.jpg" target="_self">
+                <img src="images/lord2003.jpg" height="300"></a>
+            </p>
+            <h2 style="text-align:center"><i><ins>The Lord of the Rings: The Return of the King</ins></i></h2>
+            <br>
+            <div class="description">
+                <p>
+                    <b>Director:</b> Peter Jackson
+                    <br>
+                    <b>Rating:</b> PG-13
+                    <br>
+                    <b>Genre:</b> Adventure
+                    <br>
+                    <b>Year:</b> 2003
+                    <br>
+                    <br>
+                    <p>
+                        <b>Movie Description:</b> 
+                        Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.
+                    </p>
+                </p>
+            </div>
+        </div>
 
-Genre: Crime
+    <br>
 
-Year: 1974
+        <div class="container">
+            <p style="float: left;">
+                <a href="images/goodbadugly.jpg" target="_self">
+                <img src="images/goodbadugly.jpg" height="300"></a>
+            </p>
+            <h2 style="text-align:center"><i><ins>The Good, the Bad and the Ugly</ins></i></h2>
+            <br>
+            <div class="description">
+                <p>
+                    <b>Director:</b> Sergio Leone
+                    <br>
+                    <b>Rating:</b> R
+                    <br>
+                    <b>Genre:</b> Western
+                    <br>
+                    <b>Year:</b> 1966
+                    <br>
+                    <br>
+                    <p>
+                        <b>Movie Description:</b> 
+                        A bounty hunting scam joins two men in an uneasy alliance against a third in a race to find a fortune in gold buried in a remote cemetery.
+                    </p>
+                </p>
+            </div>
+        </div>
 
-Movie Description:
-The early life and career of Vito Corleone in 1920s New York City is portrayed while his son, Michael, expands and tightens his grip on the family crime syndicate.
-    </textarea>
-</div>
+    <br>    
     
-    <br>
-    <hr>
-    <br>
-
-    <p style="float: left;">
-        <a href="images/lord2001.jpg" target="_self" title ="The Lord of the Rings: The Fellowship of the Ring">
-        <img src="images/lord2001.jpg" height="300" border="1px" ></a>
-    </p>
-    <h2><ins><i>The Lord of the Rings: The Fellowship of the Ring</i></ins></h2>
-    <br>
-    <textarea name="message" rows="16" cols="80"
-    >
-Director: Peter Jackson
-
-Rating: PG-13
-
-Genre: Adventure
-
-Year: 2001
-
-Movie Description:
-A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.
-    </textarea>
-</div>
-            
-    <br>
-    <hr>
-    <br>
-
-    <p style="float: left;">
-        <a href="images/lord2003.jpg" target="_self" title ="The Lord of the Rings: The Return of the King">
-        <img src="images/lord2003.jpg" height="300" border="1px" ></a>
-    </p>
-    <h2><ins><i>The Lord of the Rings: The Return of the King</i></ins></h2>
-    <br>
-    <textarea name="message" rows="16" cols="80"
-    >
-Director: Peter Jackson
-
-Rating: PG-13
-
-Genre: Adventure
-
-Year: 2003
-
-Movie Description:
-Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.
-    </textarea>
-</div>
-
-    <br> 
-    <hr>
-    <br>
-
-    <p style="float: left;">
-        <a href="goodbadugly.jpg" target="_self" title ="The Good, the Bad and the Ugly">
-        <img src="goodbadugly.jpg" height="300" border="1px" ></a>
-    </p>
-    <h2><ins><i>The Good, the Bad and the Ugly</i></ins></h2>
-    <br>
-    <textarea name="message" rows="16" cols="80"
-    >
-Director: Sergio Leone
-
-Rating: R
-
-Genre: Western
-
-Year: 1966
-
-Movie Description:
-A bounty hunting scam joins two men in an uneasy alliance against a third in a race to find a fortune in gold buried in a remote cemetery.
-    </textarea>
-</div>
-            
-    <br>
-    <hr>
-    <br>
-
-    <p style="float: left;">
-        <a href="images/shawshank.jpg" target="_self" title ="The Shawshank Redemption">
-        <img src="images/shawshank.jpg" height="300" border="1px" ></a>
-    </p>
-    <h2><ins><i>The Shawshank Redemption</i></ins></h2>
-    <br>
-    <textarea name="message" rows="16" cols="80"
-    >
-Director: Frank Darabont
-
-Rating: R
-
-Genre: Drama
-
-Year: 1994
-
-Movie Description:
-Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.
-    </textarea>
-</div>
-  
-    <br>
-    <script src="./js/home.js"></script>
+        <div class="container">
+            <p style="float: left;">
+                <a href="images/shawshank.jpg" target="_self">
+                <img src="images/shawshank.jpg" height="300"></a>
+            </p>
+            <h2 style="text-align:center"><i><ins>The Shawshank Redemption</ins></i></h2>
+            <br>
+            <div class="description">
+                <p>
+                    <b>Director:</b> Frank Darabont
+                    <br>
+                    <b>Rating:</b> R
+                    <br>
+                    <b>Genre:</b> Drama
+                    <br>
+                    <b>Year:</b> 1994
+                    <br>
+                    <br>
+                    <p>
+                        <b>Movie Description:</b> 
+                        Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.
+                    </p>
+                </p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

@@ -1,6 +1,3 @@
-Use NewLibrary;
-GO
-
 Insert into Employee(Enum, ssn, fname, lname, DOB,  StartDate, email)
 Values(001,123456789,'Julian','Silva','2002-08-12','2022-11-2','juliansilva@gmail.com');
 

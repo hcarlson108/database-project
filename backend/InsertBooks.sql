@@ -1,5 +1,3 @@
-USE NewLibrary;
-GO
 Insert into Book(ISBN, BookName, Genre, Author, Inv)
 VALUES('9781853262715','Anna Karenina','Fiction','Leo Tolstoy',4);
 
